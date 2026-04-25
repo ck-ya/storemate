@@ -1,0 +1,216 @@
+/* ════════════════════════════════════════
+   LAYOUT — App shell, Topbar, Nav, Main
+   ════════════════════════════════════════ */
+
+/* ──── App shell ──── */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ──── Topbar ──── */
+.topbar {
+  background: var(--warm-white);
+  border-bottom: 1.5px solid var(--border);
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--yellow-accent);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.time-display {
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--yellow-light);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ──── Nav Tabs ──── */
+.nav-tabs {
+  background: var(--warm-white);
+  border-bottom: 1.5px solid var(--border);
+  display: flex;
+  /* Mobile: horizontally scrollable, no wrapping */
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  /* Hide scrollbar on all browsers */
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE/Edge */
+  padding: 0 16px;
+  gap: 2px;
+  position: sticky;
+  top: 64px;
+  z-index: 99;
+}
+.nav-tabs::-webkit-scrollbar {
+  display: none;                  /* Chrome/Safari */
+}
+
+.nav-tab {
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  border: none;
+  background: none;
+  border-bottom: 2.5px solid transparent;
+  margin-bottom: -1.5px;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  font-family: 'DM Sans', sans-serif;
+  /* Critical: prevent tabs from shrinking on small screens */
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.nav-tab:hover {
+  color: var(--text-secondary);
+  background: var(--yellow-light);
+}
+
+.nav-tab.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--yellow-accent);
+  font-weight: 600;
+}
+
+.tab-icon { font-size: 16px; }
+
+/* ──── Main content ──── */
+.main {
+  flex: 1;
+  padding: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ──── Pages ──── */
+.page { display: none; }
+.page.active {
+  display: block;
+  animation: fadeIn 0.25s ease;
+}
+
+/* ──── Cards ──── */
+.card {
+  background: var(--warm-white);
+  border: 1.5px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.card-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+/* ──── Section headers ──── */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ──── Notification dot ──── */
+.notif-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* ──── Divider ──── */
+.divider {
+  height: 1px;
+  background: var(--border-soft);
+  margin: 20px 0;
+}
+
+/* ──── Misc helpers ──── */
+.no-data {
+  text-align: center;
+  padding: 30px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.curr { font-size: 0.75em; vertical-align: super; }
+
+/* ──── Responsive ──── */
+@media (max-width: 768px) {
+  .topbar { padding: 0 16px; }
+  .main { padding: 16px; }
+  .nav-tabs { padding: 0 8px; }
+  .nav-tab { padding: 12px 14px; font-size: 13px; }
+}
