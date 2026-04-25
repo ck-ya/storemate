@@ -1,6 +1,4 @@
-/* ════════════════════════════════════════
-   DB — State, Storage, Daily Reset
-   ════════════════════════════════════════ */
+
 
 const STORAGE_KEY = 'shopmate_db_v2';
 
