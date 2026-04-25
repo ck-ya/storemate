@@ -1,9 +1,4 @@
-/* ════════════════════════════════════════
-   COMPONENTS — Buttons, Inputs, Badges,
-   Modals, Toast, Toggle, Alerts, FAB
-   ════════════════════════════════════════ */
 
-/* ──── Buttons ──── */
 .btn {
   display: inline-flex;
   align-items: center;
