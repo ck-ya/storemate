@@ -1,6 +1,3 @@
-/* ════════════════════════════════════════
-   SETTINGS — UI, Save, Export, Import
-   ════════════════════════════════════════ */
 
 function loadSettingsUI() {
   document.getElementById('settStoreName').value   = DB.settings.storeName || '';
