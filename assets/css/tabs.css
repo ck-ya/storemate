@@ -1,10 +1,4 @@
-/* ════════════════════════════════════════
-   TABS — Sell, Inventory, Analytics, Settings
-   ════════════════════════════════════════ */
 
-/* ══════════════════════════════════
-   TAB 1 — SELL
-   ══════════════════════════════════ */
 .sell-layout {
   display: grid;
   grid-template-columns: 1fr 380px;
