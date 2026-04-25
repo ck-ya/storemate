@@ -1,6 +1,3 @@
-/* ════════════════════════════════════════
-   ANALYTICS — Stats, Period Trackers
-   ════════════════════════════════════════ */
 
 function renderAnalytics() {
   const cur         = DB.settings.currency || '₹';
