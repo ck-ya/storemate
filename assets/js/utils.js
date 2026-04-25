@@ -1,8 +1,4 @@
-/* ════════════════════════════════════════
-   UTILS — Helpers, Toast, Modals, Clock
-   ════════════════════════════════════════ */
 
-/* ── HTML escaping ────────────────────── */
 function escHtml(str) {
   if (typeof str !== 'string') str = String(str || '');
   return str
