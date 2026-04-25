@@ -1,8 +1,4 @@
-/* ════════════════════════════════════════
-   LAYOUT — App shell, Topbar, Nav, Main
-   ════════════════════════════════════════ */
 
-/* ──── App shell ──── */
 .app {
   display: flex;
   flex-direction: column;
