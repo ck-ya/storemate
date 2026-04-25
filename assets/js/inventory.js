@@ -1,6 +1,4 @@
-/* ════════════════════════════════════════
-   INVENTORY — Render, Add, Item Actions
-   ════════════════════════════════════════ */
+
 
 let actionItemId = null;
 
