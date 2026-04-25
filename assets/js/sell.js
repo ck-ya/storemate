@@ -1,8 +1,4 @@
-/* ════════════════════════════════════════
-   SELL — Search, Cart, Confirm Sale
-   ════════════════════════════════════════ */
 
-/* ── Search ───────────────────────────── */
 function onSellSearch(val) {
   const results = document.getElementById('sellSearchResults');
   if (!val.trim()) { results.style.display = 'none'; return; }
